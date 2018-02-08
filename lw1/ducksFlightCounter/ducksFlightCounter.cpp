@@ -1,10 +1,8 @@
 #include "stdafx.h"
 
-#include <cassert>
 #include <iostream>
 #include <memory>
 #include <vector>
-#include <functional>
 
 using namespace std;
 
@@ -52,20 +50,19 @@ class FlyWithWings : public IFlyBehavior
 public:
 	void Fly() override
 	{
-		m_flyCounter++;
-		cout << "I'm flying with wings!! And my fly counter = " << m_flyCounter << endl;
+		cout << "I'm flying with wings!! And my fly counter = " << ++m_flyCounter << endl;
 	}
 
 private:
 	int m_flyCounter = 0;
 };
+
 class FlyWithRocketEngine : public IFlyBehavior
 {
 public:
 	void Fly() override
 	{
-		m_flyCounter++;
-		cout << "I'm flying with rocket engine!! And my fly counter = " << m_flyCounter << endl;
+		cout << "I'm flying with rocket engine!! And my fly counter = " << ++m_flyCounter << endl;
 	}
 
 private:
@@ -116,31 +113,34 @@ public:
 		: m_quackBehavior(move(quackBehavior))
 		, m_danceBehavior(move(danceBehavior))
 	{
-		assert(m_quackBehavior);
 		SetFlyBehavior(move(flyBehavior));
 	}
+
 	void Quack() const
 	{
 		m_quackBehavior->Quack();
 	}
+
 	void Swim()
 	{
 		cout << "I'm swimming" << endl;
 	}
+
 	void Fly()
 	{
 		m_flyBehavior->Fly();
 	}
+
 	void Dance()
 	{
 		m_danceBehavior->Dance();
 	}
+
 	void SetFlyBehavior(unique_ptr<IFlyBehavior>&& flyBehavior)
 	{
-		assert(flyBehavior);
-
 		m_flyBehavior = move(flyBehavior);
 	}
+
 	virtual void Display() const = 0;
 	virtual ~Duck() = default;
 
@@ -149,8 +149,6 @@ private:
 	unique_ptr<IQuackBehavior> m_quackBehavior;
 	unique_ptr<IDanceBehavior> m_danceBehavior;
 };
-
-using FlyBehavior = function<void()>;
 
 class MallardDuck : public Duck
 {
@@ -182,6 +180,7 @@ public:
 		cout << "I'm redhead duck" << endl;
 	}
 };
+
 class DeckoyDuck : public Duck
 {
 public:
@@ -191,11 +190,13 @@ public:
 			make_unique<NoDanceBehavior>())
 	{
 	}
+
 	void Display() const override
 	{
 		cout << "I'm deckoy duck" << endl;
 	}
 };
+
 class RubberDuck : public Duck
 {
 public:
@@ -220,6 +221,7 @@ public:
 			make_unique<NoDanceBehavior>())
 	{
 	}
+
 	void Display() const override
 	{
 		cout << "I'm model duck" << endl;

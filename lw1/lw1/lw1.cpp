@@ -1,10 +1,7 @@
 #include "stdafx.h"
 
-#include <cassert>
 #include <iostream>
 #include <memory>
-#include <vector>
-#include <functional>
 
 using namespace std;
 
@@ -87,6 +84,7 @@ public:
 		cout << "Quack Quack!!!" << endl;
 	}
 };
+
 class SqueakBehavior : public IQuackBehavior
 {
 public:
@@ -111,9 +109,9 @@ public:
 		: m_quackBehavior(move(quackBehavior))
 		, m_danceBehavior(move(danceBehavior))
 	{
-		assert(m_quackBehavior);
 		SetFlyBehavior(move(flyBehavior));
 	}
+
 	void Quack() const
 	{
 		m_quackBehavior->Quack();
@@ -132,10 +130,9 @@ public:
 	}
 	void SetFlyBehavior(unique_ptr<IFlyBehavior>&& flyBehavior)
 	{
-		assert(flyBehavior);
-
 		m_flyBehavior = move(flyBehavior);
 	}
+
 	virtual void Display() const = 0;
 	virtual ~Duck() = default;
 
@@ -144,8 +141,6 @@ private:
 	unique_ptr<IQuackBehavior> m_quackBehavior;
 	unique_ptr<IDanceBehavior> m_danceBehavior;
 };
-
-using FlyBehavior = function<void()>;
 
 class MallardDuck : public Duck
 {
@@ -177,6 +172,7 @@ public:
 		cout << "I'm redhead duck" << endl;
 	}
 };
+
 class DeckoyDuck : public Duck
 {
 public:
@@ -186,11 +182,13 @@ public:
 			make_unique<NoDanceBehavior>())
 	{
 	}
+
 	void Display() const override
 	{
 		cout << "I'm deckoy duck" << endl;
 	}
 };
+
 class RubberDuck : public Duck
 {
 public:
