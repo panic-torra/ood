@@ -166,4 +166,24 @@ int main()
 
 		cout << beverage->GetDescription() << " costs " << beverage->GetCost() << endl;
 	}
+
+	{
+		auto beverage =
+			make_unique<CMilkshake>()
+			<< MakeCondiment<CChocolate>(2)
+			<< MakeCondiment<CCream>()
+			<< MakeCondiment<CLiquor>(LiquorType::Chocolate);
+
+		cout << beverage->GetDescription() << " costs " << beverage->GetCost() << endl;
+	}
+
+	{
+		auto beverage =
+			make_unique<CLatte>()
+			<< MakeCondiment<CLiquor>(LiquorType::Walnut)
+			<< MakeCondiment<CChocolate>(7)
+			<< MakeCondiment<CCream>();
+
+		cout << beverage->GetDescription() << " costs " << beverage->GetCost() << endl;
+	}
 }
