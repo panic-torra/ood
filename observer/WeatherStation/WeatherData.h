@@ -57,8 +57,11 @@ private:
 		updateStatisticsValue(m_pressure, data.pressure);
 		updateStatisticsValue(m_humidity, data.humidity);
 
+		cout << "Temperature Statistics" << endl;
 		printStatisticsValue(m_temperature);
+		cout << "Pressure Statistics" << endl;
 		printStatisticsValue(m_pressure);
+		cout << "Humidity Statistics" << endl;
 		printStatisticsValue(m_humidity);
 	}
 
