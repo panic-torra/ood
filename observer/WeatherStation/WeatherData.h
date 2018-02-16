@@ -14,6 +14,19 @@ struct SWeatherInfo
 	double pressure = 0;
 };
 
+struct SStatistic
+{
+	string name;
+	double minValue = std::numeric_limits<double>::infinity();
+	double maxValue = -std::numeric_limits<double>::infinity();
+	double accValue = 0;
+
+	SStatistic(string structName)
+		:name(structName)
+	{
+	}
+};
+
 class CDisplay: public IObserver<SWeatherInfo>
 {
 private:
@@ -39,28 +52,43 @@ private:
 	*/
 	void Update(SWeatherInfo const& data) override
 	{
-		if (m_minTemperature > data.temperature)
-		{
-			m_minTemperature = data.temperature;
-		}
-		if (m_maxTemperature < data.temperature)
-		{
-			m_maxTemperature = data.temperature;
-		}
-		m_accTemperature += data.temperature;
 		++m_countAcc;
+		updateStatisticsValue(m_temperature, data.temperature);
+		updateStatisticsValue(m_pressure, data.pressure);
+		updateStatisticsValue(m_humidity, data.humidity);
 
-		std::cout << "Max Temp " << m_maxTemperature << std::endl;
-		std::cout << "Min Temp " << m_minTemperature << std::endl;
-		std::cout << "Average Temp " << (m_accTemperature / m_countAcc) << std::endl;
+		printStatisticsValue(m_temperature);
+		printStatisticsValue(m_pressure);
+		printStatisticsValue(m_humidity);
+	}
+
+private:
+	void updateStatisticsValue(SStatistic & savedValue, double newValue)
+	{
+		if (savedValue.minValue > newValue)
+		{
+			savedValue.minValue = newValue;
+		}
+		if (savedValue.maxValue < newValue)
+		{
+			savedValue.maxValue = newValue;
+		}
+
+		savedValue.accValue += newValue;
+	}
+
+	void printStatisticsValue(SStatistic & statisticValue)
+	{
+		std::cout << "Max value " << statisticValue.maxValue << std::endl;
+		std::cout << "Min value " << statisticValue.minValue << std::endl;
+		std::cout << "Average value " << (statisticValue.accValue / m_countAcc) << std::endl;
 		std::cout << "----------------" << std::endl;
 	}
 
-	double m_minTemperature = std::numeric_limits<double>::infinity();
-	double m_maxTemperature = -std::numeric_limits<double>::infinity();
-	double m_accTemperature = 0;
+	SStatistic m_temperature = { "temperature" };
+	SStatistic m_pressure = { "pressure" };
+	SStatistic m_humidity = { "humidity" };
 	unsigned m_countAcc = 0;
-
 };
 
 class CWeatherData : public CObservable<SWeatherInfo>
