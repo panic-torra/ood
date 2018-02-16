@@ -72,6 +72,7 @@ private:
 		{
 			savedValue.minValue = newValue;
 		}
+
 		if (savedValue.maxValue < newValue)
 		{
 			savedValue.maxValue = newValue;
