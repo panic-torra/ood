@@ -1,0 +1,4 @@
+rectangle blue 10 10 45 45
+triangle red 50 10 10 60 90 60
+ellipse yellow 50 50 100 150
+polygon black 80 80 45 6
