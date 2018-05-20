@@ -11,3 +11,8 @@ Color CShape::GetColor() const
 {
 	return m_color;
 }
+
+void CShape::Draw(ICanvas & canvas) const 
+{
+	return;
+}

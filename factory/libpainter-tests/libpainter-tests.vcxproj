@@ -96,7 +96,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>"$(TargetPath)" --log_level=test_suite</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -114,7 +115,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>"$(TargetPath)" --log_level=test_suite</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -136,7 +138,8 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>"$(TargetPath)" --log_level=test_suite</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -158,13 +161,33 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>"$(TargetPath)" --log_level=test_suite</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\libpainter\Canvas.h" />
+    <ClInclude Include="..\libpainter\Color.h" />
+    <ClInclude Include="..\libpainter\ColorUtils.h" />
+    <ClInclude Include="..\libpainter\Designer.h" />
+    <ClInclude Include="..\libpainter\Ellipse.h" />
+    <ClInclude Include="..\libpainter\ICanvas.h" />
+    <ClInclude Include="..\libpainter\IDesigner.h" />
+    <ClInclude Include="..\libpainter\IPainter.h" />
+    <ClInclude Include="..\libpainter\IShape.h" />
+    <ClInclude Include="..\libpainter\IShapeFactory.h" />
+    <ClInclude Include="..\libpainter\Painter.h" />
+    <ClInclude Include="..\libpainter\PictureDraft.h" />
+    <ClInclude Include="..\libpainter\Rectangle.h" />
+    <ClInclude Include="..\libpainter\RegularPolygon.h" />
+    <ClInclude Include="..\libpainter\Shape.h" />
+    <ClInclude Include="..\libpainter\ShapeFactory.h" />
+    <ClInclude Include="..\libpainter\StringUtils.h" />
+    <ClInclude Include="..\libpainter\Triangle.h" />
+    <ClInclude Include="..\libpainter\Vertex.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>

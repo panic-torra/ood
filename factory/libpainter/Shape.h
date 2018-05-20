@@ -4,9 +4,10 @@
 class CShape : public IShape
 {
 public:
-	virtual void SetColor(Color color) override;
-	virtual Color GetColor() const override;
+	void SetColor(Color color) override;
+	Color GetColor() const override;
 
+	void Draw(ICanvas &canvas) const override;
 private:
 	Color m_color = Color::black;
 };
