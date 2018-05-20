@@ -22,6 +22,8 @@ Machine is waiting for quarter
 )";
 
 			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
+			outputStream << machine.ToString();
+			BOOST_CHECK_EQUAL(expectedOutput, outputStream.str());
 		}
 
 		BOOST_AUTO_TEST_CASE(increase_quarters_count_after_adding)
@@ -38,6 +40,8 @@ Machine is waiting for turn of crank
 			machine.InsertQuarter();
 
 			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
+			outputStream << machine.ToString();
+			BOOST_CHECK_EQUAL(expectedOutput, outputStream.str());
 
 			expectedOutput = R"(
 Mighty Gumball, Inc.
@@ -50,6 +54,9 @@ Machine is waiting for turn of crank
 			machine.InsertQuarter();
 
 			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
+			outputStream.str("");
+			outputStream << machine.ToString();
+			BOOST_CHECK_EQUAL(expectedOutput, outputStream.str());
 		}
 
 		BOOST_AUTO_TEST_CASE(return_quarters)
@@ -69,6 +76,8 @@ Machine is waiting for quarter
 			machine.EjectQuarter();
 
 			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
+			outputStream << machine.ToString();
+			BOOST_CHECK_EQUAL(expectedOutput, outputStream.str());
 		}
 
 		BOOST_AUTO_TEST_CASE(return_quarters_in_solid_state)
@@ -94,6 +103,8 @@ Machine is sold out
 			machine.EjectQuarter();
 
 			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
+			outputStream << machine.ToString();
+			BOOST_CHECK_EQUAL(expectedOutput, outputStream.str());
 		}
 
 		BOOST_AUTO_TEST_CASE(leave_machine_to_has_quarters_state_after_dispense)
@@ -112,6 +123,9 @@ Machine is waiting for turn of crank
 			machine.TurnCrank();
 
 			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
+
+			outputStream << machine.ToString();
+			BOOST_CHECK_EQUAL(expectedOutput, outputStream.str());
 		}
 	BOOST_AUTO_TEST_SUITE_END()
 BOOST_AUTO_TEST_SUITE_END()
