@@ -1,7 +1,7 @@
 #pragma once
 #include "stdafx.h"
 
-namespace with_state
+namespace with_state_multi
 {
 	struct IState
 	{
@@ -97,7 +97,7 @@ namespace with_state
 
 		void InsertQuarter() override
 		{
-			std::cout << "You can't insert a quarter, the machine is sold out\n";
+			std::cout << "Please wait, we're already giving you a gumball\n";
 		}
 
 		void EjectQuarter() override
@@ -308,7 +308,7 @@ Machine is %4%
 
 		void AddQuarter() override
 		{
-			if (m_quarters > 5)
+			if (m_quarters < 5)
 			{
 				++m_quarters;
 				std::cout << "You added a quarter" << std::endl;

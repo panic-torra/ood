@@ -14,12 +14,12 @@ BOOST_FIXTURE_TEST_SUITE(Naive_multi_gumball_machine, Naive_multi_gumball_machin
 		BOOST_AUTO_TEST_CASE(has_valid_init_state)
 		{
 			string expectedOutput = R"(
-		Mighty Gumball, Inc.
-		C++-enabled Standing Gumball Model #2016
-		Inventory: 3 gumballs
-		Quarters: 0
-		Machine is waiting for quarter
-		)";
+Mighty Gumball, Inc.
+C++-enabled Standing Gumball Model #2016
+Inventory: 3 gumballs
+Quarters: 0
+Machine is waiting for quarter
+)";
 
 			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
 		}

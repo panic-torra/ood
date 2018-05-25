@@ -2,6 +2,8 @@
 #include "NaiveGumBallMachine.h"
 #include "GumBallMachineWithState.h"
 #include "GumBallMachineWithDynamicallyCreatedState.h"
+#include "NaiveMultiQuartersGumBallMachine.h"
+#include "MultiQuartersGumBallMachineWithState.h"
 
 using namespace std;
 
@@ -49,6 +51,18 @@ void TestNaiveGumballMachine()
 void TestGumballMachineWithState()
 {
 	with_state::CGumballMachine m(5);
+	TestGumballMachine(m);
+}
+
+void TestNaiveMultyQuartersGumballMachine()
+{
+	naive::CMultiQuartersGumballMachine m(5);
+	TestGumballMachine(m);
+}
+
+void TestMultyQuartersGumballMachineWithState()
+{
+	with_state_multi::CGumballMachine m(5);
 	TestGumballMachine(m);
 }
 

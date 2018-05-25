@@ -136,7 +136,7 @@ Machine is %4%
 				}
 				else
 				{
-					m_state = State::NoQuarter;
+					m_state = (m_quarters > 0) ? State::HasQuarter : State::NoQuarter;
 				}
 				break;
 			case State::NoQuarter:
@@ -169,7 +169,7 @@ Machine is %4%
 		}
 		void AddQuarter()
 		{
-			if (m_quarters > 5)
+			if (m_quarters < 5)
 			{
 				++m_quarters;
 				std::cout << "You added a quarter" << std::endl;

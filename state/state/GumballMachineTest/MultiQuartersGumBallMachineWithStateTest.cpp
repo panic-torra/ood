@@ -6,7 +6,7 @@ using namespace std;
 struct Multi_gumball_machine_with_state_
 {
 	stringstream outputStream;
-	with_state::CGumballMachine machine{ 3 };
+	with_state_multi::CGumballMachine machine{ 3 };
 };
 
 BOOST_FIXTURE_TEST_SUITE(Multi_gumball_machine_with_state, Multi_gumball_machine_with_state_)
@@ -14,12 +14,12 @@ BOOST_FIXTURE_TEST_SUITE(Multi_gumball_machine_with_state, Multi_gumball_machine
 		BOOST_AUTO_TEST_CASE(has_valid_init_state)
 		{
 			string expectedOutput = R"(
-				Mighty Gumball, Inc.
-				C++-enabled Standing Gumball Model #2016
-				Inventory: 3 gumballs
-				Quarters: 0
-				Machine is waiting for quarter
-				)";
+Mighty Gumball, Inc.
+C++-enabled Standing Gumball Model #2016 (with state)
+Inventory: 3 gumballs
+Quarters: 0
+Machine is waiting for quarter
+)";
 
 			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
 		}
@@ -27,12 +27,12 @@ BOOST_FIXTURE_TEST_SUITE(Multi_gumball_machine_with_state, Multi_gumball_machine
 		BOOST_AUTO_TEST_CASE(increase_quarters_count_after_adding)
 		{
 			string expectedOutput = R"(
-		Mighty Gumball, Inc.
-		C++-enabled Standing Gumball Model #2016
-		Inventory: 3 gumballs
-		Quarters: 3
-		Machine is waiting for turn of crank
-		)";
+Mighty Gumball, Inc.
+C++-enabled Standing Gumball Model #2016 (with state)
+Inventory: 3 gumballs
+Quarters: 3
+Machine is waiting for turn of crank
+)";
 			machine.InsertQuarter();
 			machine.InsertQuarter();
 			machine.InsertQuarter();
@@ -40,12 +40,12 @@ BOOST_FIXTURE_TEST_SUITE(Multi_gumball_machine_with_state, Multi_gumball_machine
 			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
 
 			expectedOutput = R"(
-		Mighty Gumball, Inc.
-		C++-enabled Standing Gumball Model #2016
-		Inventory: 3 gumballs
-		Quarters: 5
-		Machine is waiting for turn of crank
-		)";
+Mighty Gumball, Inc.
+C++-enabled Standing Gumball Model #2016 (with state)
+Inventory: 3 gumballs
+Quarters: 5
+Machine is waiting for turn of crank
+)";
 			machine.InsertQuarter();
 			machine.InsertQuarter();
 
@@ -55,12 +55,12 @@ BOOST_FIXTURE_TEST_SUITE(Multi_gumball_machine_with_state, Multi_gumball_machine
 		BOOST_AUTO_TEST_CASE(return_quarters)
 		{
 			string expectedOutput = R"(
-		Mighty Gumball, Inc.
-		C++-enabled Standing Gumball Model #2016
-		Inventory: 3 gumballs
-		Quarters: 0
-		Machine is waiting for quarter
-		)";
+Mighty Gumball, Inc.
+C++-enabled Standing Gumball Model #2016 (with state)
+Inventory: 3 gumballs
+Quarters: 0
+Machine is waiting for quarter
+)";
 			machine.InsertQuarter();
 			machine.InsertQuarter();
 			machine.InsertQuarter();
@@ -74,12 +74,12 @@ BOOST_FIXTURE_TEST_SUITE(Multi_gumball_machine_with_state, Multi_gumball_machine
 		BOOST_AUTO_TEST_CASE(return_quarters_in_solid_state)
 		{
 			string expectedOutput = R"(
-		Mighty Gumball, Inc.
-		C++-enabled Standing Gumball Model #2016
-		Inventory: 0 gumballs
-		Quarters: 0
-		Machine is sold out
-		)";
+Mighty Gumball, Inc.
+C++-enabled Standing Gumball Model #2016 (with state)
+Inventory: 0 gumballs
+Quarters: 0
+Machine is sold out
+)";
 			machine.InsertQuarter();
 			machine.TurnCrank();
 
@@ -99,12 +99,12 @@ BOOST_FIXTURE_TEST_SUITE(Multi_gumball_machine_with_state, Multi_gumball_machine
 		BOOST_AUTO_TEST_CASE(leave_machine_to_has_quarters_state_after_dispense)
 		{
 			string expectedOutput = R"(
-		Mighty Gumball, Inc.
-		C++-enabled Standing Gumball Model #2016
-		Inventory: 2 gumballs
-		Quarters: 3
-		Machine is waiting for turn of crank
-		)";
+Mighty Gumball, Inc.
+C++-enabled Standing Gumball Model #2016 (with state)
+Inventory: 2 gumballs
+Quarters: 3
+Machine is waiting for turn of crank
+)";
 			machine.InsertQuarter();
 			machine.InsertQuarter();
 			machine.InsertQuarter();

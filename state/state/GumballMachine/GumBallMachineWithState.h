@@ -236,7 +236,6 @@ Machine is %3%
 		CNoQuarterState m_noQuarterState;
 		CHasQuarterState m_hasQuarterState;
 		IState * m_state;
-
 	};
 
 }
