@@ -1,16 +1,15 @@
 #include "stdafx.h"
-#include <boost/format.hpp>
 #include "../GumballMachine/NaiveMultiQuartersGumBallMachine.h"
 
 using namespace std;
 
-struct Multi_gumball_machine_
+struct Naive_multi_gumball_machine_
 {
 	stringstream outputStream;
-	naive::CGumballMachine machine{ 3 };
+	naive::CMultiQuartersGumballMachine machine{ 3 };
 };
 
-BOOST_FIXTURE_TEST_SUITE(Multi_gumball_machine, Multi_gumball_machine_)
+BOOST_FIXTURE_TEST_SUITE(Naive_multi_gumball_machine, Naive_multi_gumball_machine_)
 	BOOST_AUTO_TEST_SUITE(when_created)
 		BOOST_AUTO_TEST_CASE(has_valid_init_state)
 		{

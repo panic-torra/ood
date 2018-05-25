@@ -1,6 +1,5 @@
 #pragma once
-#include <iostream>
-#include <memory>
+#include "stdafx.h"
 
 namespace with_dynamic_state
 {

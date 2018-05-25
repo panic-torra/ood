@@ -10,6 +10,8 @@
 #include <stdio.h>
 #include <tchar.h>
 
-
+#include <iostream>
+#include <memory>
+#include <boost\format.hpp>
 
 // TODO: Установите здесь ссылки на дополнительные заголовки, требующиеся для программы

@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include <boost/format.hpp>
 #include "../GumballMachine/GumBallMachineWithState.h"
 
 using namespace std;
@@ -21,7 +20,8 @@ BOOST_FIXTURE_TEST_SUITE(Gumball_machine_with_state, Gumball_machine_with_state_
 		Machine is waiting for quarter
 		)";
 
-			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
+			outputStream << machine.ToString();
+			BOOST_CHECK_EQUAL(expectedOutput, outputStream.str());
 		}
 
 		BOOST_AUTO_TEST_CASE(does_not_change_state_if_we_turn_crank)

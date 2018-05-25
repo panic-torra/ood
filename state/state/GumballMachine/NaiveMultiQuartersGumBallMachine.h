@@ -1,11 +1,9 @@
 #pragma once
-
-#include <iostream>
-#include <boost/format.hpp>
+#include "stdafx.h"
 
 namespace naive
 {
-	class CGumballMachine
+	class CMultiQuartersGumballMachine
 	{
 	public:
 		enum class State
@@ -16,7 +14,7 @@ namespace naive
 			Sold,			// Монетка выдана
 		};
 
-		CGumballMachine(unsigned count)
+		CMultiQuartersGumballMachine(unsigned count)
 			: m_ballsCount(count)
 			, m_state(count > 0 ? State::NoQuarter : State::SoldOut)
 			, m_quarters(0)
