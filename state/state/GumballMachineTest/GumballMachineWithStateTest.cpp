@@ -111,7 +111,7 @@ BOOST_FIXTURE_TEST_SUITE(Gumball_machine_with_state, Gumball_machine_with_state_
 
 		BOOST_AUTO_TEST_CASE(change_state_to_sold_out_if_we_sell_all_gumballs)
 		{
-			string expectedOutputOne = R"(
+			string expectedOutput = R"(
 		Mighty Gumball, Inc.
 		C++-enabled Standing Gumball Model #2016 (with state)
 		Inventory: 2 gumballs
@@ -120,9 +120,9 @@ BOOST_FIXTURE_TEST_SUITE(Gumball_machine_with_state, Gumball_machine_with_state_
 
 			machine.InsertQuarter();
 			machine.TurnCrank();
-			BOOST_CHECK_EQUAL(expectedOutputOne, machine.ToString());
+			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
 
-			string expectedOutputTwo = R"(
+			expectedOutput = R"(
 		Mighty Gumball, Inc.
 		C++-enabled Standing Gumball Model #2016 (with state)
 		Inventory: 1 gumball
@@ -131,9 +131,9 @@ BOOST_FIXTURE_TEST_SUITE(Gumball_machine_with_state, Gumball_machine_with_state_
 			machine.InsertQuarter();
 			machine.TurnCrank();
 			outputStream << machine.ToString();
-			BOOST_CHECK_EQUAL(expectedOutputTwo, machine.ToString());
+			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
 
-			string expectedOutputLast = R"(
+			expectedOutput = R"(
 		Mighty Gumball, Inc.
 		C++-enabled Standing Gumball Model #2016 (with state)
 		Inventory: 0 gumballs
@@ -143,7 +143,7 @@ BOOST_FIXTURE_TEST_SUITE(Gumball_machine_with_state, Gumball_machine_with_state_
 			machine.TurnCrank();
 			machine.InsertQuarter();
 			machine.TurnCrank();
-			BOOST_CHECK_EQUAL(expectedOutputLast, machine.ToString());
+			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
 		}
 	BOOST_AUTO_TEST_SUITE_END()
 BOOST_AUTO_TEST_SUITE_END()
