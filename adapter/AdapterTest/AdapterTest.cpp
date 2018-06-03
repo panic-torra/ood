@@ -4,17 +4,17 @@
 BOOST_AUTO_TEST_SUITE(adapter)
 	BOOST_AUTO_TEST_CASE(can_move_and_draw_line)
 	{
-		boost::test_tools::output_test_stream stream;
+		stringstream stream;
 
-		modern_graphics_lib::CModernGraphicsRenderer renderer(stream);
-		app::CModernGraphicsRendererAdapter adapter(renderer);
+		app::CModernGraphicsRendererAdapter adapter(stream);
 
 		adapter.MoveTo(250, 250);
 		adapter.LineTo(260, 260);
 
-		BOOST_CHECK(stream.is_equal(
-			"<draw>\n"
-			"<line fromX=\"250\" fromY=\"250\" toX=\"260\" toY=\"260\"/>\n"
-		));
+		auto expectedResult = R"(<draw>
+(<line fromX=250 fromY=250 toX=260 toY=260/>)
+)";
+
+		BOOST_CHECK_EQUAL(stream.str(), expectedResult);
 	}
 BOOST_AUTO_TEST_SUITE_END()
