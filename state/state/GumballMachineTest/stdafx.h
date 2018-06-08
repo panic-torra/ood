@@ -14,5 +14,6 @@
 
 #define BOOST_TEST_INCLUDED
 #include <boost/test/unit_test.hpp>
+#include <boost/test/output_test_stream.hpp>
 
 // TODO: Установите здесь ссылки на дополнительные заголовки, требующиеся для программы

@@ -5,7 +5,7 @@ using namespace std;
 
 struct Multi_gumball_machine_with_state_
 {
-	stringstream outputStream;
+	boost::test_tools::output_test_stream outputStream;
 	with_state_multi::CGumballMachine machine{ 3 };
 };
 
@@ -21,9 +21,8 @@ Quarters: 0
 Machine is waiting for quarter
 )";
 
-			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
 			outputStream << machine.ToString();
-			BOOST_CHECK_EQUAL(expectedOutput, outputStream.str());
+			BOOST_CHECK(outputStream.is_equal(expectedOutput));
 		}
 
 		BOOST_AUTO_TEST_CASE(increase_quarters_count_after_adding)
@@ -39,9 +38,8 @@ Machine is waiting for turn of crank
 			machine.InsertQuarter();
 			machine.InsertQuarter();
 
-			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
 			outputStream << machine.ToString();
-			BOOST_CHECK_EQUAL(expectedOutput, outputStream.str());
+			BOOST_CHECK(outputStream.is_equal(expectedOutput));
 
 			expectedOutput = R"(
 Mighty Gumball, Inc.
@@ -53,10 +51,9 @@ Machine is waiting for turn of crank
 			machine.InsertQuarter();
 			machine.InsertQuarter();
 
-			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
 			outputStream.str("");
 			outputStream << machine.ToString();
-			BOOST_CHECK_EQUAL(expectedOutput, outputStream.str());
+			BOOST_CHECK(outputStream.is_equal(expectedOutput));
 		}
 
 		BOOST_AUTO_TEST_CASE(return_quarters)
@@ -75,9 +72,8 @@ Machine is waiting for quarter
 			machine.InsertQuarter();
 			machine.EjectQuarter();
 
-			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
 			outputStream << machine.ToString();
-			BOOST_CHECK_EQUAL(expectedOutput, outputStream.str());
+			BOOST_CHECK(outputStream.is_equal(expectedOutput));
 		}
 
 		BOOST_AUTO_TEST_CASE(return_quarters_in_solid_state)
@@ -102,9 +98,8 @@ Machine is sold out
 			machine.InsertQuarter();
 			machine.EjectQuarter();
 
-			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
 			outputStream << machine.ToString();
-			BOOST_CHECK_EQUAL(expectedOutput, outputStream.str());
+			BOOST_CHECK(outputStream.is_equal(expectedOutput));
 		}
 
 		BOOST_AUTO_TEST_CASE(leave_machine_to_has_quarters_state_after_dispense)
@@ -122,10 +117,8 @@ Machine is waiting for turn of crank
 			machine.InsertQuarter();
 			machine.TurnCrank();
 
-			BOOST_CHECK_EQUAL(expectedOutput, machine.ToString());
-
 			outputStream << machine.ToString();
-			BOOST_CHECK_EQUAL(expectedOutput, outputStream.str());
+			BOOST_CHECK(outputStream.is_equal(expectedOutput));
 		}
 	BOOST_AUTO_TEST_SUITE_END()
 BOOST_AUTO_TEST_SUITE_END()
