@@ -136,19 +136,19 @@ Ellipse: (0, 1), Width: 5, Height: 10
 )";
 			BOOST_CHECK_EQUAL(outputStream.str(), expectedCanvasContent);
 		}
-		BOOST_AUTO_TEST_SUITE_END()
-		BOOST_AUTO_TEST_SUITE_END()
+	BOOST_AUTO_TEST_SUITE_END()
+BOOST_AUTO_TEST_SUITE_END()
 
 
-		struct RegularPolygon_
-		{
-			stringstream outputStream;
-			CCanvas canvas{ outputStream };
-			CRegularPolygon polygon{ { 5, 5 }, 10, 5, Color::red };
-		};
+struct RegularPolygon_
+{
+	stringstream outputStream;
+	CCanvas canvas{ outputStream };
+	CRegularPolygon polygon{ { 5, 5 }, 10, 5, Color::red };
+};
 
-		BOOST_FIXTURE_TEST_SUITE(Regular_polygon, RegularPolygon_)
-		BOOST_AUTO_TEST_SUITE(when_created)
+BOOST_FIXTURE_TEST_SUITE(Regular_polygon, RegularPolygon_)
+	BOOST_AUTO_TEST_SUITE(when_created)
 		BOOST_AUTO_TEST_CASE(has_custom_color)
 		{
 			BOOST_CHECK_EQUAL(polygon.GetColor(), Color::red);
@@ -171,7 +171,6 @@ Ellipse: (0, 1), Width: 5, Height: 10
 		}
 		BOOST_AUTO_TEST_CASE(can_draw_itself_on_canvas)
 		{
-			BOOST_CHECK(true);
 			polygon.Draw(canvas);
 			auto expectedCanvasContent = R"(Color: red
 Line: (15, 5), (8.09017, 14.5106)
@@ -181,6 +180,16 @@ Line: (-3.09017, -0.877853), (8.09017, -4.51056)
 Line: (8.09017, -4.51056), (15, 5)
 )";
 			BOOST_CHECK_EQUAL(outputStream.str(), expectedCanvasContent);
+		}
+
+		BOOST_AUTO_TEST_CASE(cant_create_polygon_with_zero_vertex)
+		{
+			BOOST_CHECK_THROW(CRegularPolygon({ 5, 5 }, 10, 0, Color::red ), std::logic_error);
+		}
+
+		BOOST_AUTO_TEST_CASE(cant_create_polygon_with_zero_radius)
+		{
+			BOOST_CHECK_THROW(CRegularPolygon({ 5, 5 }, 0, 5, Color::red), std::logic_error);
 		}
 	BOOST_AUTO_TEST_SUITE_END()
 BOOST_AUTO_TEST_SUITE_END()

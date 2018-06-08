@@ -1,4 +1,5 @@
 #pragma once
+#include <stdexcept>
 #include "stdafx.h"
 #include "RegularPolygon.h"
 
@@ -36,6 +37,11 @@ CRegularPolygon::CRegularPolygon(Vertex const & center, float radius, unsigned v
 	, m_radius(radius)
 	, m_vertexCount(vertexCount)
 {
+	if (m_vertexCount <= 0 || m_radius <= 0)
+	{
+		throw std::logic_error("Vertex count and/or radius can't be equal or less than 0");
+	}
+
 	SetColor(color);
 }
 
