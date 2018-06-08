@@ -137,10 +137,9 @@ namespace shape_drawing_lib
 	};
 }
 
-class CRGBAColor
+struct RGBAColor
 {
-public:
-	CRGBAColor(float r, float g, float b, float a) 
+	RGBAColor(float r = 0, float g = 0, float b = 0, float a = 1)
 		: r(r)
 		, g(g)
 		, b(b)
@@ -158,7 +157,7 @@ namespace modern_graphics_lib
 	class CPoint
 	{
 	public:
-		CPoint(int x, int y) :x(x), y(y) {}
+		CPoint(int x = 0, int y = 0) :x(x), y(y) {}
 
 		int x;
 		int y;
@@ -192,7 +191,7 @@ namespace modern_graphics_lib
 		}
 
 		// Выполняет рисование линии
-		void DrawLine(const CPoint & start, const CPoint & end, const CRGBAColor& color)
+		void DrawLine(const CPoint & start, const CPoint & end, const RGBAColor& color)
 		{
 			if (!m_drawing)
 			{
@@ -227,18 +226,17 @@ namespace app
 	public:
 		CModernGraphicsRendererAdapter(modern_graphics_lib::CModernGraphicsRenderer & renderer)
 			: m_renderer(renderer)
-			, m_currentPoint({ 0, 0 })
-			, m_rgbaColor(0, 0, 0, 0)
+			, m_currentPoint()
+			, m_rgbaColor()
 		{
 			m_renderer.BeginDraw();
 		}
-		//http://qaru.site/questions/50421/convert-from-hex-color-to-rgb-struct-in-c
+
 		void SetColor(uint32_t rgbColor) override
 		{
 			m_rgbaColor.r = ((rgbColor >> 16) & 0xff) / 255.f;
 			m_rgbaColor.g = ((rgbColor >> 8) & 0xff) / 255.f;
 			m_rgbaColor.b = (rgbColor & 0xff) / 255.f;
-			m_rgbaColor.a = 1.0;
 		}
 
 		void MoveTo(int x, int y) override
@@ -254,7 +252,7 @@ namespace app
 	private:
 		modern_graphics_lib::CModernGraphicsRenderer & m_renderer;
 		modern_graphics_lib::CPoint m_currentPoint;
-		CRGBAColor m_rgbaColor;
+		RGBAColor m_rgbaColor;
 	};
 
 	void PaintPicture(shape_drawing_lib::CCanvasPainter & painter)
