@@ -2,22 +2,26 @@
 #include "stdafx.h"
 #include "Color.h"
 
-static Color GetColorFromString(std::string stringColor)
+class GetColorParamsHelper
 {
-	Color result = Color::black;
-	for (auto &i : COLOR_TO_STRING_MAP)
+public:
+	static Color GetColorFromString(const std::string & stringColor)
 	{
-		if (i.second == stringColor)
+		Color result = Color::black;
+		for (auto &i : COLOR_TO_STRING_MAP)
 		{
-			result = i.first;
-			break;
+			if (i.second == stringColor)
+			{
+				result = i.first;
+				break;
+			}
 		}
+
+		return result;
 	}
 
-	return result;
-}
-
-static std::string GetColorStringValue(Color color)
-{
-	return COLOR_TO_STRING_MAP.at(color);
-}
+	static std::string GetColorStringValue(Color color)
+	{
+		return COLOR_TO_STRING_MAP.at(color);
+	}
+};

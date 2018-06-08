@@ -31,7 +31,7 @@ void CRegularPolygon::Draw(ICanvas &canvas) const
 }
 
 
-CRegularPolygon::CRegularPolygon(Vertex const & center, float radius, unsigned vertexCount, Color const & color)
+CRegularPolygon::CRegularPolygon(Vertex const & center, float radius, unsigned vertexCount, Color const color)
 	: m_center(center)
 	, m_radius(radius)
 	, m_vertexCount(vertexCount)

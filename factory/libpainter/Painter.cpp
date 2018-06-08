@@ -9,3 +9,13 @@ void CPainter::DrawPicture(CPictureDraft & draft, ICanvas &canvas)
 		shape.Draw(canvas);
 	}
 }
+
+CPainter::CPainter()
+{
+
+}
+
+CPainter::~CPainter()
+{
+
+}

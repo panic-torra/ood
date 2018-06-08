@@ -72,9 +72,6 @@
     <ClInclude Include="Vertex.h">
       <Filter>Source Files\Struct</Filter>
     </ClInclude>
-    <ClInclude Include="Painter.h">
-      <Filter>Source Files\Painter</Filter>
-    </ClInclude>
     <ClInclude Include="IPainter.h">
       <Filter>Source Files\Painter</Filter>
     </ClInclude>
@@ -101,6 +98,9 @@
     </ClInclude>
     <ClInclude Include="ColorUtils.h">
       <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Painter.h">
+      <Filter>Source Files\Painter</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

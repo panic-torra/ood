@@ -10,7 +10,7 @@
 
 std::unique_ptr<CShape> CShapeFactory::CreateShape(const std::string & description)
 {
-	std::vector<std::string> params = GetParams(description);
+	std::vector<std::string> params = GetInputParamsHelper::GetParams(description);
 	std::string shape = boost::algorithm::to_lower_copy(params.at(0));
 
 	if (shape == "triangle")
@@ -35,7 +35,7 @@ std::unique_ptr<CShape> CShapeFactory::CreateShape(const std::string & descripti
 
 std::unique_ptr<CShape> CShapeFactory::GetTriangle(const std::vector<std::string> & params)
 {
-	Color color = GetColorFromString(params.at(1));
+	Color color = GetColorParamsHelper::GetColorFromString(params.at(1));
 	Vertex v1 = { stof(params.at(2)), stof(params.at(3)) };
 	Vertex v2 = { stof(params.at(4)), stof(params.at(5)) };
 	Vertex v3 = { stof(params.at(6)), stof(params.at(7)) };
@@ -45,7 +45,7 @@ std::unique_ptr<CShape> CShapeFactory::GetTriangle(const std::vector<std::string
 
 std::unique_ptr<CShape> CShapeFactory::GetRectangle(const std::vector<std::string> & params)
 {
-	Color color = GetColorFromString(params.at(1));
+	Color color = GetColorParamsHelper::GetColorFromString(params.at(1));
 	Vertex leftTop = { stof(params.at(2)), stof(params.at(3)) };
 	Vertex rightTop = { stof(params.at(4)), stof(params.at(5)) };
 
@@ -54,7 +54,7 @@ std::unique_ptr<CShape> CShapeFactory::GetRectangle(const std::vector<std::strin
 
 std::unique_ptr<CShape> CShapeFactory::GetEllipse(const std::vector<std::string> & params)
 {
-	Color color = GetColorFromString(params.at(1));
+	Color color = GetColorParamsHelper::GetColorFromString(params.at(1));
 	Vertex center = { stof(params.at(2)), stof(params.at(3)) };
 	float width = stof(params.at(4));
 	float height = stof(params.at(5));
@@ -64,7 +64,7 @@ std::unique_ptr<CShape> CShapeFactory::GetEllipse(const std::vector<std::string>
 
 std::unique_ptr<CShape> CShapeFactory::GetPolygon(const std::vector<std::string> & params)
 {
-	Color color = GetColorFromString(params.at(1));
+	Color color = GetColorParamsHelper::GetColorFromString(params.at(1));
 	Vertex center = { stof(params.at(2)), stof(params.at(3)) };
 	float radius = stof(params.at(4));
 	int vertexCount = stoi(params.at(5));

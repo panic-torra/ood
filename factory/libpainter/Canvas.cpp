@@ -5,7 +5,7 @@
 void CCanvas::SetColor(Color color)
 {
 	m_color = color;
-	m_output << "Color: " << GetColorStringValue(color) << std::endl;
+	m_output << "Color: " << GetColorParamsHelper::GetColorStringValue(color) << std::endl;
 }
 
 void CCanvas::DrawLine(const Vertex from, const Vertex to)

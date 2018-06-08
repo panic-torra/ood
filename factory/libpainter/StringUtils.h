@@ -2,16 +2,20 @@
 #include "stdafx.h"
 #include "Color.h"
 
-static std::vector<std::string> GetParams(const std::string & stringParams)
+class GetInputParamsHelper
 {
-	std::stringstream paramsStream(stringParams);
-	std::vector<std::string> paramsList;
-	std::string param;
-
-	while (paramsStream >> param)
+public:
+	static std::vector<std::string> GetParams(const std::string & stringParams)
 	{
-		paramsList.push_back(param);
-	}
+		std::stringstream paramsStream(stringParams);
+		std::vector<std::string> paramsList;
+		std::string param;
 
-	return paramsList;
-}
+		while (paramsStream >> param)
+		{
+			paramsList.push_back(param);
+		}
+
+		return paramsList;
+	}
+};

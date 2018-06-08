@@ -4,7 +4,7 @@
 class CRegularPolygon : public CShape
 {
 public:
-	CRegularPolygon(Vertex const & center, float radius, unsigned vertexCount, Color const & color);
+	CRegularPolygon(Vertex const & center, float radius, unsigned vertexCount, Color const color);
 
 	void Draw(ICanvas& canvas) const override;
 	Vertex GetCenter() const;

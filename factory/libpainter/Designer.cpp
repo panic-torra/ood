@@ -17,7 +17,7 @@ CPictureDraft CDesigner::CreateDraft(std::istream & input)
 		{
 			draft.AddShape(m_factory.CreateShape(line));
 		}
-		catch (std::exception & e)
+		catch (std::exception const & e)
 		{
 			std::cout << e.what() << std::endl;
 		}

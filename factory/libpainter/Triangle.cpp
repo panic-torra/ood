@@ -3,7 +3,7 @@
 #include "Triangle.h"
 #include "Vertex.h"
 
-CTriangle::CTriangle(Vertex const & vertex1, Vertex const & vertex2, Vertex const & vertex3, Color const & color)
+CTriangle::CTriangle(Vertex const & vertex1, Vertex const & vertex2, Vertex const & vertex3, Color const color)
 	: m_vertex1(vertex1)
 	, m_vertex2(vertex2)
 	, m_vertex3(vertex3)

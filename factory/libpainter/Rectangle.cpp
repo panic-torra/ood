@@ -14,7 +14,7 @@ void CRectangle::Draw(ICanvas & canvas) const
 	canvas.DrawLine(leftBottom, m_leftTop);
 }
 
-CRectangle::CRectangle(Vertex const & leftTop, Vertex const & rightBottom, Color const & color)
+CRectangle::CRectangle(Vertex const & leftTop, Vertex const & rightBottom, Color const color)
 	: m_leftTop(leftTop)
 	, m_rightBottom(rightBottom)
 {

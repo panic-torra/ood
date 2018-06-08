@@ -7,4 +7,5 @@ class IDesigner
 {
 public:
 	virtual CPictureDraft CreateDraft(std::istream &data) = 0;
+	virtual ~IDesigner() = default;
 };
