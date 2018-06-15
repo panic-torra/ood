@@ -70,7 +70,7 @@ shared_ptr<CGroupShape> CreateCar(CSVGCanvas & canvas)
 
 void ResizeCarFrame(shared_ptr<CGroupShape> & car, CSVGCanvas & canvas)
 {
-	RectangleDouble newFrame = { 500, 50, 340, 220 };
+	RectangleDouble newFrame = { 500, 50, 250, 20 };
 
 	car->SetFrame(newFrame);
 	car->Draw(canvas);
@@ -80,7 +80,7 @@ void UpdateCarFrameStyle(shared_ptr<CGroupShape> & car, CSVGCanvas & canvas)
 {
 	RectangleDouble newFrame = { 900, 50, 170, 220 };
 	car->SetFrame(newFrame);
-	car->GetFillStyle()->SetColor(BLUE_COLOR);
+	car->GetFillStyle()->SetColor(YELLOW_COLOR);
 	car->GetOutlineStyle()->SetColor(BLUE_COLOR);
 }
 

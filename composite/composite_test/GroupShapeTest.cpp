@@ -27,17 +27,17 @@ BOOST_FIXTURE_TEST_SUITE(Group_shape, Group_shape_)
 			BOOST_CHECK_EQUAL(groupShape->GetFrame().height, emptyFrame.height);
 		}
 
-		BOOST_AUTO_TEST_CASE(throws_ecception_when_trying_to_get_a_shape)
+		BOOST_AUTO_TEST_CASE(throws_exception_when_trying_to_get_a_shape)
 		{
 			BOOST_CHECK_THROW(groupShape->GetShapeAtIndex(1), out_of_range);
 		}
 
-		BOOST_AUTO_TEST_CASE(throws_ecception_when_trying_to_erase_a_shape)
+		BOOST_AUTO_TEST_CASE(throws_exception_when_trying_to_erase_a_shape)
 		{
 			BOOST_CHECK_THROW(groupShape->RemoveShapeAtIndex(1), out_of_range);
 		}
 
-		BOOST_AUTO_TEST_CASE(can_be_added_with_shape)
+		BOOST_AUTO_TEST_CASE(can_add_a_shape)
 		{
 			shared_ptr<CEllipse> ellipse = make_shared<CEllipse>(Vertex{ 300, 70 }, 30, 30);
 			groupShape->InsertShape(ellipse);
