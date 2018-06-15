@@ -13,6 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Заголовочные файлы\Canvas">
+      <UniqueIdentifier>{9e87523b-dd2a-4176-9b82-fd7266ccef5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Shape">
+      <UniqueIdentifier>{2619a7a3-6a52-4c13-bd73-d37702ae45d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Style">
+      <UniqueIdentifier>{3be0ef33-9a54-40d1-bd1f-33365c563765}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Slide">
+      <UniqueIdentifier>{76ec0968-92b4-488c-90c2-40995308bf0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Utils">
+      <UniqueIdentifier>{5a8946fe-20dd-4c32-9345-74d33af076ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\GroupShape">
+      <UniqueIdentifier>{08bc8fbc-c9cd-45b7-aac6-20388fa10a8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Canvas">
+      <UniqueIdentifier>{686b9ea4-88d7-4acc-946a-f2e7a6dc1458}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\GroupShape">
+      <UniqueIdentifier>{a9966914-e2a9-4872-800b-b807dbedcaaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Slide">
+      <UniqueIdentifier>{e0edfe79-5f9f-4b91-aca9-c3533c19aa75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Style">
+      <UniqueIdentifier>{b2e7f56a-af94-48e6-8249-0bad28b45e65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Shape">
+      <UniqueIdentifier>{16a255fd-a3fc-4e5e-a083-9c0d56ac858a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,6 +57,75 @@
     <ClInclude Include="targetver.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="Canvas.h">
+      <Filter>Заголовочные файлы\Canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="Ellipse.h">
+      <Filter>Заголовочные файлы\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="ICanvas.h">
+      <Filter>Заголовочные файлы\Canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="IShape.h">
+      <Filter>Заголовочные файлы\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGCanvas.h">
+      <Filter>Заголовочные файлы\Canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="CompositeStyle.h">
+      <Filter>Заголовочные файлы\Style</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Заголовочные файлы\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Заголовочные файлы\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="Style.h">
+      <Filter>Заголовочные файлы\Style</Filter>
+    </ClInclude>
+    <ClInclude Include="ISlide.h">
+      <Filter>Заголовочные файлы\Slide</Filter>
+    </ClInclude>
+    <ClInclude Include="Slide.h">
+      <Filter>Заголовочные файлы\Slide</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonTypes.h">
+      <Filter>Заголовочные файлы\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="IStyle.h">
+      <Filter>Заголовочные файлы\Style</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Заголовочные файлы\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="IDrawable.h">
+      <Filter>Заголовочные файлы\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupShape.h">
+      <Filter>Заголовочные файлы\GroupShape</Filter>
+    </ClInclude>
+    <ClInclude Include="IGroupShape.h">
+      <Filter>Заголовочные файлы\GroupShape</Filter>
+    </ClInclude>
+    <ClInclude Include="IShapes.h">
+      <Filter>Заголовочные файлы\GroupShape</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes.h">
+      <Filter>Заголовочные файлы\GroupShape</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyle.h">
+      <Filter>Заголовочные файлы\Style</Filter>
+    </ClInclude>
+    <ClInclude Include="OutlineStyle.h">
+      <Filter>Заголовочные файлы\Style</Filter>
+    </ClInclude>
+    <ClInclude Include="IStyleBehavior.h">
+      <Filter>Заголовочные файлы\Style</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Заголовочные файлы\Shape</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -31,6 +133,42 @@
     </ClCompile>
     <ClCompile Include="composite.cpp">
       <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGCanvas.cpp">
+      <Filter>Файлы исходного кода\Canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupShape.cpp">
+      <Filter>Файлы исходного кода\GroupShape</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes.cpp">
+      <Filter>Файлы исходного кода\GroupShape</Filter>
+    </ClCompile>
+    <ClCompile Include="Slide.cpp">
+      <Filter>Файлы исходного кода\Slide</Filter>
+    </ClCompile>
+    <ClCompile Include="Style.cpp">
+      <Filter>Файлы исходного кода\Style</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositeStyle.cpp">
+      <Filter>Файлы исходного кода\Style</Filter>
+    </ClCompile>
+    <ClCompile Include="Ellipse.cpp">
+      <Filter>Файлы исходного кода\Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>Файлы исходного кода\Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Файлы исходного кода\Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="FillStyle.cpp">
+      <Filter>Файлы исходного кода\Style</Filter>
+    </ClCompile>
+    <ClCompile Include="OutlineStyle.cpp">
+      <Filter>Файлы исходного кода\Style</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Файлы исходного кода\Shape</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

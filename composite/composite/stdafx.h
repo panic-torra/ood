@@ -11,5 +11,12 @@
 #include <tchar.h>
 
 
-
-// TODO: Установите здесь ссылки на дополнительные заголовки, требующиеся для программы
+#include <cstdint>
+#include <memory>
+#include <vector>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+#include <boost/optional.hpp>
+#include <algorithm>

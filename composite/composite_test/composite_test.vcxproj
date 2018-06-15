@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F99D999A-0D0F-42F6-A8DF-03258435F3E1}</ProjectGuid>
+    <ProjectGuid>{E763DF44-266C-491F-A5AA-6767FFC2B8AD}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>composite</RootNamespace>
+    <RootNamespace>composite_test</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -145,52 +145,49 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Canvas.h" />
-    <ClInclude Include="CommonTypes.h" />
-    <ClInclude Include="CompositeStyle.h" />
-    <ClInclude Include="Ellipse.h" />
-    <ClInclude Include="FillStyle.h" />
-    <ClInclude Include="OutlineStyle.h" />
-    <ClInclude Include="GroupShape.h" />
-    <ClInclude Include="ICanvas.h" />
-    <ClInclude Include="IDrawable.h" />
-    <ClInclude Include="IStyleBehavior.h" />
-    <ClInclude Include="IGroupShape.h" />
-    <ClInclude Include="IShape.h" />
-    <ClInclude Include="IShapes.h" />
-    <ClInclude Include="ISlide.h" />
-    <ClInclude Include="IStyle.h" />
-    <ClInclude Include="Rectangle.h" />
-    <ClInclude Include="Shapes.h" />
-    <ClInclude Include="Shape.h" />
-    <ClInclude Include="Slide.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Style.h" />
-    <ClInclude Include="SVGCanvas.h" />
-    <ClInclude Include="targetver.h" />
-    <ClInclude Include="Triangle.h" />
-    <ClInclude Include="Vertex.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="composite.cpp" />
-    <ClCompile Include="CompositeStyle.cpp" />
-    <ClCompile Include="Ellipse.cpp" />
-    <ClCompile Include="FillStyle.cpp" />
-    <ClCompile Include="OutlineStyle.cpp" />
-    <ClCompile Include="GroupShape.cpp" />
-    <ClCompile Include="Rectangle.cpp" />
-    <ClCompile Include="Shapes.cpp" />
-    <ClCompile Include="Shape.cpp" />
-    <ClCompile Include="Slide.cpp" />
+    <ClCompile Include="..\composite\CompositeStyle.cpp" />
+    <ClCompile Include="..\composite\Ellipse.cpp" />
+    <ClCompile Include="..\composite\FillStyle.cpp" />
+    <ClCompile Include="..\composite\GroupShape.cpp" />
+    <ClCompile Include="..\composite\OutlineStyle.cpp" />
+    <ClCompile Include="..\composite\Rectangle.cpp" />
+    <ClCompile Include="..\composite\Shape.cpp" />
+    <ClCompile Include="..\composite\Shapes.cpp" />
+    <ClCompile Include="..\composite\Slide.cpp" />
+    <ClCompile Include="..\composite\Style.cpp" />
+    <ClCompile Include="..\composite\Triangle.cpp" />
+    <ClCompile Include="composite_test.cpp" />
+    <ClCompile Include="GroupShapeTest.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Style.cpp" />
-    <ClCompile Include="SVGCanvas.cpp" />
-    <ClCompile Include="Triangle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\composite\Canvas.h" />
+    <ClInclude Include="..\composite\CommonTypes.h" />
+    <ClInclude Include="..\composite\CompositeStyle.h" />
+    <ClInclude Include="..\composite\Ellipse.h" />
+    <ClInclude Include="..\composite\FillStyle.h" />
+    <ClInclude Include="..\composite\GroupShape.h" />
+    <ClInclude Include="..\composite\ICanvas.h" />
+    <ClInclude Include="..\composite\IDrawable.h" />
+    <ClInclude Include="..\composite\IGroupShape.h" />
+    <ClInclude Include="..\composite\IShape.h" />
+    <ClInclude Include="..\composite\IShapes.h" />
+    <ClInclude Include="..\composite\ISlide.h" />
+    <ClInclude Include="..\composite\IStyle.h" />
+    <ClInclude Include="..\composite\IStyleBehavior.h" />
+    <ClInclude Include="..\composite\OutlineStyle.h" />
+    <ClInclude Include="..\composite\Rectangle.h" />
+    <ClInclude Include="..\composite\Shape.h" />
+    <ClInclude Include="..\composite\Shapes.h" />
+    <ClInclude Include="..\composite\Slide.h" />
+    <ClInclude Include="..\composite\Style.h" />
+    <ClInclude Include="..\composite\Triangle.h" />
+    <ClInclude Include="..\composite\Vertex.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

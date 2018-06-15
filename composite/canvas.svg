@@ -1,0 +1,11 @@
+<svg version = "1.1" xmlns = "http://www.w3.org/2000/svg">
+<path stroke="#1567d6" stroke-width="1" fill="#da2727" d="M 150,70 L 380,70 L 380,140 L 150,140 L 150,70 " />
+ <ellipse stroke="#000000" stroke-width="1" fill="#a6c918" cx="150" cy="170" rx="30" ry="30" />
+ <ellipse stroke="#000000" stroke-width="1" fill="#eeeb01" cx="380" cy="170" rx="30" ry="30" />
+<path stroke="#1567d6" stroke-width="1" fill="#da2727" d="M 535.172,50 L 804.828,50 L 804.828,168.462 L 535.172,168.462 L 535.172,50 " />
+ <ellipse stroke="#000000" stroke-width="1" fill="#a6c918" cx="535.172" cy="219.231" rx="35.1724" ry="50.7692" />
+ <ellipse stroke="#000000" stroke-width="1" fill="#eeeb01" cx="804.828" cy="219.231" rx="35.1724" ry="50.7692" />
+<path stroke="#1567d6" stroke-width="1" fill="#1567d6" d="M 917.586,50 L 1052.41,50 L 1052.41,168.462 L 917.586,168.462 L 917.586,50 " />
+ <ellipse stroke="#1567d6" stroke-width="1" fill="#1567d6" cx="917.586" cy="219.231" rx="17.5862" ry="50.7692" />
+ <ellipse stroke="#1567d6" stroke-width="1" fill="#1567d6" cx="1052.41" cy="219.231" rx="17.5862" ry="50.7692" />
+</svg>

@@ -1,7 +1,8 @@
 #pragma once
+#include "stdafx.h"
 
 template <typename T>
-struct Rect
+struct Rectangle
 {
 	T left;
 	T top;
@@ -9,5 +10,5 @@ struct Rect
 	T height;
 };
 
-typedef Rect<double> RectD;
+typedef Rectangle<double> RectangleDouble;
 typedef uint32_t RGBAColor;
