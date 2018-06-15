@@ -76,7 +76,7 @@ BOOST_AUTO_TEST_SUITE(AdapterPro)
 		BOOST_CHECK(stream.is_equal(expectedResult));
 	}
 
-	BOOST_AUTO_TEST_CASE(handle_exception_when_begin_draw_twice)
+	BOOST_AUTO_TEST_CASE(throws_exception_when_begin_draw_twice)
 	{
 		boost::test_tools::output_test_stream stream;
 
@@ -85,7 +85,7 @@ BOOST_AUTO_TEST_SUITE(AdapterPro)
 		BOOST_CHECK_THROW(renderer.BeginDraw(), logic_error);
 	}
 
-	BOOST_AUTO_TEST_CASE(handle_exception_when_begin_draw_without_init)
+	BOOST_AUTO_TEST_CASE(throws_exception_when_begin_draw_without_init)
 	{
 		boost::test_tools::output_test_stream stream;
 		modern_graphics_lib::CModernGraphicsRenderer renderer(stream);
@@ -93,7 +93,7 @@ BOOST_AUTO_TEST_SUITE(AdapterPro)
 		BOOST_CHECK_THROW(renderer.DrawLine({ 0, 0 }, { 0, 0 }, color), logic_error);
 	}
 
-	BOOST_AUTO_TEST_CASE(handle_exception_when_end_draw_witout_starting)
+	BOOST_AUTO_TEST_CASE(throws_exception_when_end_draw_witout_starting)
 	{
 		boost::test_tools::output_test_stream stream;
 
@@ -105,9 +105,10 @@ BOOST_AUTO_TEST_SUITE(AdapterPro)
 	{
 		boost::test_tools::output_test_stream stream;
 
-		modern_graphics_lib::CModernGraphicsRenderer renderer(stream);
-		renderer.BeginDraw();
-		renderer.~CModernGraphicsRenderer();
+		{
+			modern_graphics_lib::CModernGraphicsRenderer renderer(stream);
+			renderer.BeginDraw();
+		}
 
 		auto expectedResult = R"(<draw>
 </draw>
