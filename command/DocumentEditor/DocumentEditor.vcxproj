@@ -151,13 +151,12 @@
     <ClInclude Include="Document.h" />
     <ClInclude Include="DocumentExporter.h" />
     <ClInclude Include="DocumentItem.h" />
-    <ClInclude Include="DocumentResourcePath.h" />
+    <ClInclude Include="DocumentTempPath.h" />
     <ClInclude Include="FileResource.h" />
     <ClInclude Include="FileUtils.h" />
     <ClInclude Include="History.h" />
     <ClInclude Include="ICommand.h" />
     <ClInclude Include="IDocument.h" />
-    <ClInclude Include="IDocumentExporter.h" />
     <ClInclude Include="IDocumentItem.h" />
     <ClInclude Include="IFileResource.h" />
     <ClInclude Include="IHistory.h" />
@@ -177,7 +176,7 @@
     <ClCompile Include="DocumentEditor.cpp" />
     <ClCompile Include="DocumentExporter.cpp" />
     <ClCompile Include="DocumentItem.cpp" />
-    <ClCompile Include="DocumentResourcePath.cpp" />
+    <ClCompile Include="DocumentTempPath.cpp" />
     <ClCompile Include="FileResource.cpp" />
     <ClCompile Include="FileUtils.cpp" />
     <ClCompile Include="History.cpp" />

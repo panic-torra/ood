@@ -1,20 +1,19 @@
 #pragma once
 #include "stdafx.h"
-#include "IDocumentExporter.h"
 #include "Document.h"
 
-class CDocumentHtmlExporter : public IDocumentExporter
+class CDocumentHtmlExporter
 {
 public:
-	CDocumentHtmlExporter(CDocument const& document, boost::filesystem::path const& pathToHtmlFile);
+	CDocumentHtmlExporter(std::string const& documentTitle, boost::filesystem::path const& pathToHtmlFile);
 	~CDocumentHtmlExporter();
 
-	void AddParagraph(std::shared_ptr<IParagraph> const& paragraph) override;
-	void AddImage(std::shared_ptr<IImage> const& image) override;
+	void AddParagraph(std::shared_ptr<IParagraph> const& paragraph);
+	void AddImage(std::shared_ptr<IImage> const& image);
 
 private:
 	void OpenFileForSave(std::string const& path);
-	void WriteDocumentHeader(CDocument const& document);
+	void WriteDocumentHeader(std::string const& documentTitle);
 	void WriteDocumentFooter();
 	boost::filesystem::path CopyImageResource(boost::filesystem::path const& source);
 	static boost::filesystem::path CreateResultFileResourcesPath(boost::filesystem::path const& filePath);

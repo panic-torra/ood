@@ -1,8 +1,8 @@
 #include "stdafx.h"
-#include "DocumentResourcePath.h"
+#include "DocumentTempPath.h"
 #include "FileUtils.h"
 
-CDocumentResourcePath::~CDocumentResourcePath()
+CDocumentTempPath::~CDocumentTempPath()
 {
 	if (m_tempPath != boost::none)
 	{
@@ -16,7 +16,7 @@ CDocumentResourcePath::~CDocumentResourcePath()
 	}
 }
 
-boost::filesystem::path CDocumentResourcePath::GetTempPath() const
+boost::filesystem::path CDocumentTempPath::GetTempPath() const
 {
 	if (m_tempPath == boost::none)
 	{

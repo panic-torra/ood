@@ -21,7 +21,7 @@ std::shared_ptr<const IImage> CImageDocumentItem::GetImage() const
 	return m_image;
 }
 
-void CImageDocumentItem::AcceptExporter(IDocumentExporter* exporter) const
+void CImageDocumentItem::AcceptExporter(CDocumentHtmlExporter* exporter) const
 {
 	exporter->AddImage(m_image);
 }

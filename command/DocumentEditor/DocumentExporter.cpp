@@ -2,7 +2,7 @@
 #include "DocumentExporter.h"
 #include "FileUtils.h"
 
-CDocumentHtmlExporter::CDocumentHtmlExporter(CDocument const& document, boost::filesystem::path const& pathToHtmlFile)
+CDocumentHtmlExporter::CDocumentHtmlExporter(std::string const& documentTitle, boost::filesystem::path const& pathToHtmlFile)
 	: m_resultFilePath(pathToHtmlFile)
 {
 	if (FileUtils::Exists(pathToHtmlFile))
@@ -11,7 +11,7 @@ CDocumentHtmlExporter::CDocumentHtmlExporter(CDocument const& document, boost::f
 	}
 
 	OpenFileForSave(pathToHtmlFile.string());
-	WriteDocumentHeader(document);
+	WriteDocumentHeader(documentTitle);
 }
 
 CDocumentHtmlExporter::~CDocumentHtmlExporter()
@@ -45,9 +45,9 @@ void CDocumentHtmlExporter::OpenFileForSave(std::string const& path)
 	}
 }
 
-void CDocumentHtmlExporter::WriteDocumentHeader(CDocument const& document)
+void CDocumentHtmlExporter::WriteDocumentHeader(std::string const& documentTitle)
 {
-	m_resultFile << (boost::format(R"text(<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/><title>%1%</title></head><body><h1>%1%</h1>)text") % EncodeString(document.GetTitle()));
+	m_resultFile << (boost::format(R"text(<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/><title>%1%</title></head><body><h1>%1%</h1>)text") % EncodeString(documentTitle));
 }
 
 void CDocumentHtmlExporter::WriteDocumentFooter()

@@ -1,10 +1,10 @@
 #pragma once
 #include "stdafx.h"
 
-class CDocumentResourcePath
+class CDocumentTempPath
 {
 public:
-	~CDocumentResourcePath();
+	~CDocumentTempPath();
 	boost::filesystem::path GetTempPath() const;
 
 private:

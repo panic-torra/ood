@@ -145,6 +145,16 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\DocumentEditor\Command.h" />
+    <ClInclude Include="..\DocumentEditor\Document.h" />
+    <ClInclude Include="..\DocumentEditor\DocumentExporter.h" />
+    <ClInclude Include="..\DocumentEditor\DocumentItem.h" />
+    <ClInclude Include="..\DocumentEditor\DocumentResourcePath.h" />
+    <ClInclude Include="..\DocumentEditor\FileResource.h" />
+    <ClInclude Include="..\DocumentEditor\FileUtils.h" />
+    <ClInclude Include="..\DocumentEditor\History.h" />
+    <ClInclude Include="..\DocumentEditor\Paragraph.h" />
+    <ClInclude Include="..\DocumentEditor\ParagraphDocumentItem.h" />
     <ClInclude Include="EditCommand.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />

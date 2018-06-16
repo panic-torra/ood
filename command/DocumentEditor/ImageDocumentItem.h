@@ -11,7 +11,7 @@ public:
 	std::string GetDescription()const override;
 	std::shared_ptr<IImage> GetImage() override;
 	std::shared_ptr<const IImage> GetImage() const override;
-	void AcceptExporter(IDocumentExporter* exporter) const override;
+	void AcceptExporter(CDocumentHtmlExporter* exporter) const override;
 
 private:
 	std::shared_ptr<CImage> m_image;

@@ -3,7 +3,7 @@
 #include "IDocumentItem.h"
 #include "IFileResource.h"
 #include "History.h"
-#include "DocumentResourcePath.h"
+#include "DocumentTempPath.h"
 
 class CDocument : public IDocument
 {
@@ -40,5 +40,5 @@ private:
 	std::string m_title;
 	std::list<IDocumentItem::Ptr> m_items;
 	CHistory m_history;
-	CDocumentResourcePath m_resourcePath;
+	CDocumentTempPath m_resourcePath;
 };

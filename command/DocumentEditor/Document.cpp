@@ -2,7 +2,7 @@
 #include "Document.h"
 #include "ParagraphDocumentItem.h"
 #include "ImageDocumentItem.h"
-#include "Command.h";
+#include "Command.h"
 #include "InsertItemCommand.h"
 #include "ChangeItemCommand.h"
 #include "DeleteItemCommand.h"
@@ -107,7 +107,7 @@ void CDocument::Redo()
 
 void CDocument::Save(boost::filesystem::path const & path) const
 {
-	std::unique_ptr<CDocumentHtmlExporter> htmlExporter = std::make_unique<CDocumentHtmlExporter>(*this, path);
+	std::unique_ptr<CDocumentHtmlExporter> htmlExporter = std::make_unique<CDocumentHtmlExporter>(m_title, path);
 	std::for_each(m_items.begin(), m_items.end(), [&htmlExporter](IDocumentItem::ConstPtr const& item) {
 		item->AcceptExporter(htmlExporter.get());
 	});

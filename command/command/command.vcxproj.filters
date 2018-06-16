@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы исходного кода\CliHelper">
+      <UniqueIdentifier>{7e504149-da38-44ea-8527-40f0635dfe33}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,55 +27,85 @@
     <ClInclude Include="targetver.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="..\DocumentEditor\Command.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DocumentEditor\Document.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DocumentEditor\DocumentExporter.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DocumentEditor\DocumentItem.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DocumentEditor\DocumentResourcePath.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DocumentEditor\FileResource.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DocumentEditor\FileUtils.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DocumentEditor\History.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DocumentEditor\Paragraph.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DocumentEditor\ParagraphDocumentItem.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
     <ClInclude Include="EditCommand.h">
-      <Filter>Заголовочные файлы</Filter>
+      <Filter>Файлы исходного кода\CliHelper</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="EditCommand.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
     <ClCompile Include="..\DocumentEditor\Command.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="..\DocumentEditor\Document.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="..\DocumentEditor\DocumentExporter.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="..\DocumentEditor\DocumentItem.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="..\DocumentEditor\DocumentResourcePath.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="..\DocumentEditor\FileResource.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="..\DocumentEditor\FileUtils.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="..\DocumentEditor\History.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="..\DocumentEditor\Image.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="..\DocumentEditor\ImageDocumentItem.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="..\DocumentEditor\Paragraph.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="..\DocumentEditor\ParagraphDocumentItem.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Файлы исходного кода</Filter>
+    <ClCompile Include="EditCommand.cpp">
+      <Filter>Файлы исходного кода\CliHelper</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
