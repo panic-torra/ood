@@ -52,6 +52,15 @@
     <Filter Include="Заголовочные файлы\Utils">
       <UniqueIdentifier>{f8893bb7-6e17-4d63-9b05-4affb6f58ec3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы исходного кода\Utils">
+      <UniqueIdentifier>{e66d86b2-2e44-4b51-b9ac-8214fd3c8717}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Command">
+      <UniqueIdentifier>{9d80b187-cc8d-4736-b295-3fd2996a177c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\DocumentItem">
+      <UniqueIdentifier>{e6bd4f6a-d5e2-452a-be33-ba5c723585df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -160,6 +169,21 @@
     </ClCompile>
     <ClCompile Include="Paragraph.cpp">
       <Filter>Файлы исходного кода\Paragraph</Filter>
+    </ClCompile>
+    <ClCompile Include="FileUtils.cpp">
+      <Filter>Файлы исходного кода\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>Файлы исходного кода\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentItem.cpp">
+      <Filter>Файлы исходного кода\DocumentItem</Filter>
+    </ClCompile>
+    <ClCompile Include="ParagraphDocumentItem.cpp">
+      <Filter>Файлы исходного кода\DocumentItem</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageDocumentItem.cpp">
+      <Filter>Файлы исходного кода\DocumentItem</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

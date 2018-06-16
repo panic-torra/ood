@@ -17,7 +17,7 @@ CEditCommand::CEditCommand(IDocument& document, std::istream& in, std::ostream& 
 {
 	PrintHelp();
 	PrintDocument();
-	PrintCarriage();
+	m_out << std::endl << std::endl << "> ";
 }
 
 void CEditCommand::HandleCommand()
@@ -50,11 +50,6 @@ void CEditCommand::HandleCommand()
 	}
 
 	PrintDocument();
-	PrintCarriage();
-}
-
-void CEditCommand::PrintCarriage()
-{
 	m_out << std::endl << std::endl << "> ";
 }
 

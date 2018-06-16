@@ -2,6 +2,7 @@
 #include "Document.h"
 #include "ParagraphDocumentItem.h"
 #include "ImageDocumentItem.h"
+#include "Command.h";
 #include "InsertItemCommand.h"
 #include "ChangeItemCommand.h"
 #include "DeleteItemCommand.h"

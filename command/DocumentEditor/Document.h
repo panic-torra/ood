@@ -7,7 +7,6 @@
 
 class CDocument : public IDocument
 {
-
 public:
 	CDocument();
 

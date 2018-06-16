@@ -150,7 +150,19 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="command.cpp" />
+    <ClCompile Include="..\DocumentEditor\Command.cpp" />
+    <ClCompile Include="..\DocumentEditor\Document.cpp" />
+    <ClCompile Include="..\DocumentEditor\DocumentExporter.cpp" />
+    <ClCompile Include="..\DocumentEditor\DocumentItem.cpp" />
+    <ClCompile Include="..\DocumentEditor\DocumentResourcePath.cpp" />
+    <ClCompile Include="..\DocumentEditor\FileResource.cpp" />
+    <ClCompile Include="..\DocumentEditor\FileUtils.cpp" />
+    <ClCompile Include="..\DocumentEditor\History.cpp" />
+    <ClCompile Include="..\DocumentEditor\Image.cpp" />
+    <ClCompile Include="..\DocumentEditor\ImageDocumentItem.cpp" />
+    <ClCompile Include="..\DocumentEditor\Paragraph.cpp" />
+    <ClCompile Include="..\DocumentEditor\ParagraphDocumentItem.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="EditCommand.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

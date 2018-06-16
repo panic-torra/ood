@@ -1,6 +1,6 @@
 #include "stdafx.h"
-#include "../DocumentEditor/Document.h"
 #include "EditCommand.h"
+#include "../DocumentEditor/Document.h"
 
 int main()
 {

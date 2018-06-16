@@ -172,14 +172,19 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Command.cpp" />
     <ClCompile Include="Document.cpp" />
     <ClCompile Include="DocumentEditor.cpp" />
     <ClCompile Include="DocumentExporter.cpp" />
+    <ClCompile Include="DocumentItem.cpp" />
     <ClCompile Include="DocumentResourcePath.cpp" />
     <ClCompile Include="FileResource.cpp" />
+    <ClCompile Include="FileUtils.cpp" />
     <ClCompile Include="History.cpp" />
     <ClCompile Include="Image.cpp" />
+    <ClCompile Include="ImageDocumentItem.cpp" />
     <ClCompile Include="Paragraph.cpp" />
+    <ClCompile Include="ParagraphDocumentItem.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

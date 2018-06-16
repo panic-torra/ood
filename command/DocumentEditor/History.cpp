@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "History.h"
+#include "Command.h"
 
 void CHistory::Push(std::unique_ptr<ICommand> && command)
 {
