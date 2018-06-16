@@ -13,6 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Заголовочные файлы\Document">
+      <UniqueIdentifier>{6d4dca14-bab7-4d26-9e37-58c59194d5ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Paragraph">
+      <UniqueIdentifier>{121d10f3-260f-4a83-8a2e-48360e897081}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\History">
+      <UniqueIdentifier>{9c7e2eb4-fb0f-4c94-b4b4-b7cc6b90a5ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Command">
+      <UniqueIdentifier>{ace20d5f-d5aa-4aac-940a-3af27d4c1126}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Image">
+      <UniqueIdentifier>{eccb1168-74f7-40af-a41a-820cc3271c10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\FileResource">
+      <UniqueIdentifier>{acd7596e-b3a0-4c9f-b404-b84f3e2d62af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Document">
+      <UniqueIdentifier>{e3a0cf63-4891-4d77-b4dc-12f9a42104d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\History">
+      <UniqueIdentifier>{038663f9-f411-4735-abbb-979155562a06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Image">
+      <UniqueIdentifier>{6e260a21-3ab2-446d-801e-1847bdb72428}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\FileResource">
+      <UniqueIdentifier>{d7f6e130-733c-4084-8ebf-31a3827a3cc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Paragraph">
+      <UniqueIdentifier>{3de28685-b894-4bdc-ab63-3708f8bffabf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\DocumentItem">
+      <UniqueIdentifier>{ed5b696b-7bee-4bcf-95f9-42c2c5dba277}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Utils">
+      <UniqueIdentifier>{f8893bb7-6e17-4d63-9b05-4affb6f58ec3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,6 +63,75 @@
     <ClInclude Include="targetver.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="IDocument.h">
+      <Filter>Заголовочные файлы\Document</Filter>
+    </ClInclude>
+    <ClInclude Include="IParagraph.h">
+      <Filter>Заголовочные файлы\Paragraph</Filter>
+    </ClInclude>
+    <ClInclude Include="Paragraph.h">
+      <Filter>Заголовочные файлы\Paragraph</Filter>
+    </ClInclude>
+    <ClInclude Include="IHistory.h">
+      <Filter>Заголовочные файлы\History</Filter>
+    </ClInclude>
+    <ClInclude Include="ICommand.h">
+      <Filter>Заголовочные файлы\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>Заголовочные файлы\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="History.h">
+      <Filter>Заголовочные файлы\History</Filter>
+    </ClInclude>
+    <ClInclude Include="IImage.h">
+      <Filter>Заголовочные файлы\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>Заголовочные файлы\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="IFileResource.h">
+      <Filter>Заголовочные файлы\FileResource</Filter>
+    </ClInclude>
+    <ClInclude Include="FileResource.h">
+      <Filter>Заголовочные файлы\FileResource</Filter>
+    </ClInclude>
+    <ClInclude Include="Document.h">
+      <Filter>Заголовочные файлы\Document</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentResourcePath.h">
+      <Filter>Заголовочные файлы\Document</Filter>
+    </ClInclude>
+    <ClInclude Include="IDocumentItem.h">
+      <Filter>Заголовочные файлы\DocumentItem</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentItem.h">
+      <Filter>Заголовочные файлы\DocumentItem</Filter>
+    </ClInclude>
+    <ClInclude Include="ParagraphDocumentItem.h">
+      <Filter>Заголовочные файлы\DocumentItem</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageDocumentItem.h">
+      <Filter>Заголовочные файлы\DocumentItem</Filter>
+    </ClInclude>
+    <ClInclude Include="InsertItemCommand.h">
+      <Filter>Заголовочные файлы\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeItemCommand.h">
+      <Filter>Заголовочные файлы\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteItemCommand.h">
+      <Filter>Заголовочные файлы\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="FileUtils.h">
+      <Filter>Заголовочные файлы\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="IDocumentExporter.h">
+      <Filter>Заголовочные файлы\Document</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentExporter.h">
+      <Filter>Заголовочные файлы\Document</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -31,6 +139,27 @@
     </ClCompile>
     <ClCompile Include="DocumentEditor.cpp">
       <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Document.cpp">
+      <Filter>Файлы исходного кода\Document</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentExporter.cpp">
+      <Filter>Файлы исходного кода\Document</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentResourcePath.cpp">
+      <Filter>Файлы исходного кода\Document</Filter>
+    </ClCompile>
+    <ClCompile Include="History.cpp">
+      <Filter>Файлы исходного кода\History</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>Файлы исходного кода\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="FileResource.cpp">
+      <Filter>Файлы исходного кода\FileResource</Filter>
+    </ClCompile>
+    <ClCompile Include="Paragraph.cpp">
+      <Filter>Файлы исходного кода\Paragraph</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

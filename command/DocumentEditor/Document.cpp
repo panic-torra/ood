@@ -20,7 +20,7 @@ std::shared_ptr<IParagraph> CDocument::InsertParagraph(std::string const & text,
 
 	std::shared_ptr<CParagraphDocumentItem> item = std::make_shared<CParagraphDocumentItem>(text, m_history);
 
-	std::unique_ptr<CInsertItemCommand<DocumentItemsList>> command = std::make_unique<CInsertItemCommand<DocumentItemsList>>(m_items, item, position);
+	std::unique_ptr<CInsertItemCommand<std::list<IDocumentItem::Ptr>>> command = std::make_unique<CInsertItemCommand<std::list<IDocumentItem::Ptr>>>(m_items, item, position);
 	m_history.Push(std::move(command));
 
 	return item->GetParagraph();
@@ -33,7 +33,7 @@ std::shared_ptr<IImage> CDocument::InsertImage(boost::filesystem::path const & p
 	IFileResource::Ptr fileResource = GetCopiedImageResource(path);
 	std::shared_ptr<CImageDocumentItem> item = std::make_shared<CImageDocumentItem>(std::move(fileResource), ImageSize(width, height), m_history);
 
-	std::unique_ptr<CInsertItemCommand<DocumentItemsList>> command = std::make_unique<CInsertItemCommand<DocumentItemsList>>(m_items, item, position);
+	std::unique_ptr<CInsertItemCommand<std::list<IDocumentItem::Ptr>>> command = std::make_unique<CInsertItemCommand<std::list<IDocumentItem::Ptr>>>(m_items, item, position);
 	m_history.Push(std::move(command));
 
 	return item->GetImage();
@@ -66,7 +66,7 @@ void CDocument::DeleteItem(size_t index)
 {
 	ValidateItemPosition(index);
 
-	m_history.Push(std::make_unique<CDeleteItemCommand<DocumentItemsList>>(m_items, index));
+	m_history.Push(std::make_unique<CDeleteItemCommand<std::list<IDocumentItem::Ptr>>>(m_items, index));
 }
 
 void CDocument::SetTitle(std::string const& title)

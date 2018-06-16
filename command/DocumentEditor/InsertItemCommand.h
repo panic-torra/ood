@@ -1,6 +1,7 @@
 #pragma once
-#include "Command.h"
 #include "stdafx.h"
+#include "Command.h"
+#include "DocumentItem.h"
 
 template <typename T>
 class CInsertItemCommand : public CCommand

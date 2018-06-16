@@ -1,6 +1,6 @@
 #pragma once
-#include "stdafx.h"
 #include "Command.h"
+#include <boost\optional.hpp>
 
 template <typename T>
 class CDeleteItemCommand : public CCommand

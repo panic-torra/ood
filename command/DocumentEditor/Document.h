@@ -7,7 +7,6 @@
 
 class CDocument : public IDocument
 {
-	typedef std::list<IDocumentItem::Ptr> DocumentItemsList;
 
 public:
 	CDocument();
@@ -40,7 +39,7 @@ private:
 	void ValidateItemPosition(size_t position) const;
 
 	std::string m_title;
-	DocumentItemsList m_items;
+	std::list<IDocumentItem::Ptr> m_items;
 	CHistory m_history;
 	CDocumentResourcePath m_resourcePath;
 };
